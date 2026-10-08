@@ -206,7 +206,6 @@
       <h2 id="exam">🎯 Câu hỏi thi</h2>
       ${(f.examQuestions || []).map((q, i) => qaView(q, i, 'e')).join('')}
 
-      ${t.issues && t.issues.length ? `<details class="concept" style="margin-top:20px"><summary>🛡 Nhật ký kiểm định (lỗi trong bản nháp đã được sửa)</summary>${t.issues.map(x => `<p><b>${esc(x.where)}:</b> ${fmt(x.problem)}<br><span style="color:var(--ok)">→ ${fmt(x.correction)}</span></p>`).join('')}</details>` : ''}
 
       <div class="btn-row" style="justify-content:space-between;margin-top:28px">
         ${prev ? `<a class="btn" href="#/topic/${prev.id}">← ${esc(prev.final.title.slice(0, 40))}${prev.final.title.length > 40 ? '…' : ''}</a>` : '<span></span>'}
